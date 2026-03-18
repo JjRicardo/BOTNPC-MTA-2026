@@ -1,0 +1,12 @@
+<meta>
+    <info author="DrZiig - Developer" type="script" name="BotNPC - Zona Infection" description="Exemplo de uso do resource BotNPC" />
+
+    <script src="shared/tunnel.lua" type="shared" cache="false" />
+    <script src="shared/security.lua" type="shared" cache="false" />
+    
+    <script src="server/*" type="server" />
+    <script src="client/*" type="client" />
+
+    <!-- Importa as funções do BotNPC -->
+    <include resource="BotNPC" />
+</meta>

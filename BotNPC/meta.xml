@@ -1,0 +1,84 @@
+<meta>
+    <info author="DrZiig" version="1.0" type="script" description="Sistema de BotNPC com IA Avançada" />
+    <oop>true</oop>
+    
+    <!-- SHARED - Carregar PRIMEIRO -->
+    <script src="shared/init.lua" type="shared" />
+    <script src="shared/bytedata.lua" type="shared" />
+    <script src="shared/constants.lua" type="shared" />
+    <script src="shared/weapons_data.lua" type="shared" />
+    <script src="shared/utils.lua" type="shared" />
+    <script src="shared/events.lua" type="shared" />
+    <script src="shared/teams.lua" type="shared" />
+    <script src="shared/bot_types.lua" type="shared" />
+    
+    <!-- SERVER -->
+    <script src="server/bot_manager.lua" type="server" />
+    <script src="server/squad_manager.lua" type="server" />
+    <script src="server/combat_logic.lua" type="server" />
+    <script src="server/pvp_logic.lua" type="server" />
+    <script src="server/pathfinder.lua" type="server" />
+    <script src="server/persistence.lua" type="server" />
+    <script src="server/admin_commands.lua" type="server" />
+    <script src="server/node_editor_server.lua" type="server" />
+    <script src="server/main.lua" type="server" />
+    
+    <!-- CLIENT -->
+    <script src="client/streaming.lua" type="client" />
+    <script src="client/perception.lua" type="client" />
+    <script src="client/audio_listener.lua" type="client" />
+    <script src="client/movement.lua" type="client" />
+    <script src="client/combat_client.lua" type="client" />
+    <script src="client/pvp_damage.lua" type="client" />
+    <script src="client/ai_states.lua" type="client" />
+    <script src="client/hud_debug.lua" type="client" />
+    <script src="client/node_editor.lua" type="client" />
+    <script src="client/main.lua" type="client" />
+    
+    <!-- MAPS -->
+    <script src="maps/default_nodes.lua" type="server" />
+    <script src="maps/map_editor.lua" type="server" />
+    <script src="maps/generators/node_generator.lua" type="server" />
+    <script src="maps/generators/navmesh_loader.lua" type="client" />
+    
+    <!-- EXPORTS SERVER -->
+    <export function="createBot" type="server" />
+    <export function="createBotsInArea" type="server" />
+    <export function="createSquad" type="server" />
+    <export function="getBots" type="server" />
+    <export function="getBotsInDimension" type="server" />
+    <export function="getBotCount" type="server" />
+    <export function="destroyBot" type="server" />
+    <export function="destroyAllBots" type="server" />
+    <export function="destroyBotsInDimension" type="server" />
+    <export function="setBotTarget" type="server" />
+    <export function="setBotProtectTarget" type="server" />
+    <export function="setBotProtectArea" type="server" />
+    <export function="getBotData" type="server" />
+    <export function="isBot" type="server" />
+    <export function="setElementTeam" type="server" />
+    <export function="getElementTeam" type="server" />
+    <export function="areEnemies" type="server" />
+    <export function="areAllies" type="server" />
+    
+    <!-- EXPORTS CLIENT -->
+    <export function="getBotsInDimension" type="client" />
+    <export function="getBotCount" type="client" />
+    <export function="isBot" type="client" />
+    <export function="getBotData" type="client" />
+    <export function="getBotState" type="client" />
+    <export function="getBotTarget" type="client" />
+    <export function="isBotStreamed" type="client" />
+    <export function="toggleBotDebug" type="client" />
+    <export function="setElementTeam" type="client" />
+    <export function="getElementTeam" type="client" />
+    <export function="areEnemies" type="client" />
+    <export function="areAllies" type="client" />
+    
+    <!-- Settings -->
+    <setting name="bot_max_count" value="1000" friendlyName="Máximo de Bots" />
+    <setting name="bot_default_health" value="100" friendlyName="Vida Padrão" />
+    <setting name="bot_attack_damage" value="15" friendlyName="Dano do Ataque" />
+    <setting name="bot_stream_distance" value="150" friendlyName="Distância de Stream" />
+    
+</meta>
